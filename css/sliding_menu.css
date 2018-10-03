@@ -1,0 +1,346 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header,
+footer {
+    height: 50px;
+    line-height: 50px;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    font-size: 1.2em;
+}
+
+footer {
+    bottom: 0px;
+}
+
+section {
+    height: calc(100% - 100px);
+}
+
+/* below are the style rules for article */
+article {
+    width: calc(100% - 310px);
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article div {
+    padding: 2em;
+    text-align: justify;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-height: 100%;
+    width: 80%;
+    overflow-y: hidden
+}
+
+article div h3 {
+    font-family: 'Paprika'
+}
+
+article div p {
+    font-family: 'Sofia'
+}
+
+/* end of style rules for article */
+
+/* below are style rules for nav section */
+nav {
+    width: 310px;
+    float: left;
+    height: 100%;
+    background-color: #222d32;
+}
+
+nav div.profile {
+    width: 100%;
+    text-align: center;
+}
+
+nav div.avatar {
+    width: 240px;
+    margin: 15px 0px;
+    float: left;
+}
+
+nav div.profile-buttons {
+    width: 70px;
+    float: right;
+}
+
+nav div.profile-buttons button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    margin: 5px 0px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* below are the style rules for the sliding navigation menu */
+.sidenav-heading {
+    color: #999;
+    text-align: center;
+    background-color: #1a2226;
+    padding: 1px;
+}
+
+.sidenav-heading h4 {
+    margin: 15px 0px;
+}
+
+#sliding-menu-wrapper {
+    position: relative;
+}
+
+#sliding-menu {
+  position: absolute;
+  width: 310px;
+  top: 0px;
+  height: 300px;
+}
+
+#dt-close-nav {
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  cursor: pointer;
+  color: #b8c7ce;
+  padding: 5px 8px;
+  margin-top: 3px;
+}
+
+#dt-close-nav:hover {
+  color: #fff
+}
+
+#dt-close-nav {
+  display: none;
+}
+
+#sliding-menu ul {
+  line-height: 44px;
+  text-decoration: none;
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+  border-top: 1px solid #444
+}
+
+#sliding-menu li {
+  border-bottom: 1px solid #444;
+  border-left: 5px solid transparent;
+  color: #b8c7ce;
+}
+
+#sliding-menu li:hover {
+  border-left-color: #f39c12;
+  color: #fff;
+}
+
+#sliding-menu li ul li:hover {
+  border-left-color: #0090c7;
+}
+
+#sliding-menu li ul li ul li:hover {
+  border-left-color: #E0E0E0;
+}
+
+#sliding-menu li ul li ul li ul li:hover {
+  border-left-color: #252525;
+}
+
+#sliding-menu ul li a:hover {
+  color: #fff;
+  background-color: #000d1a;
+}
+
+.stepMenuMarginFix {
+  border-bottom: 6px solid #444 !important;
+}
+
+#sliding-menu .sub-nav {
+  position: absolute;
+  top: 0px;
+  width: 310px;
+  background: #222d32;
+  height: 300px;
+  left: -310px;
+}
+
+#sliding-menu .sub-nav .sub-nav {
+  position: absolute;
+  top: -40px;
+  width: 310px;
+  height: 300px;
+}
+
+#sliding-menu li .big-toggle-sub {
+  background: #222d32;
+  display: block;
+  padding-left: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+#sliding-menu li .big-toggle-sub.extra-left-padding {
+  padding-left: 24px;
+}
+
+.float-right {
+  float: right;
+  margin-top: 15px;
+  margin-right: 6px;
+}
+
+#sliding-menu li:hover .big-toggle-sub,
+#sliding-menu li:hover .toggle-sub {
+  background-color: #000d1a;
+}
+
+#sliding-menu li:hover .sub-nav .big-toggle-sub,
+#sliding-menu li:hover .sub-nav .toggle-sub {
+  background-color: #222d32;
+}
+
+#sliding-menu li .sub-nav li:hover .big-toggle-sub,
+#sliding-menu li .sub-nav li:hover .toggle-sub {
+  background-color: #000d1a;
+}
+
+#sliding-menu li .sub-nav li:hover .sub-nav .big-toggle-sub,
+#sliding-menu li .sub-nav li:hover .sub-nav .toggle-sub {
+  background-color: #222d32;
+}
+
+#sliding-menu li .sub-nav li .sub-nav li:hover .big-toggle-sub,
+#sliding-menu li .sub-nav li .sub-nav li:hover .toggle-sub {
+  background-color: #000d1a;
+}
+
+#sliding-menu .toggle:hover {
+  color: #fff;
+}
+
+#sliding-menu a:hover {
+  cursor: pointer;
+}
+
+#sliding-menu .toggle-sub {
+  background: #222d32;
+  float: right;
+  margin-top: -39px;
+  width: 36px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+#sliding-menu ul li a {
+  background: #222d32;
+  display: block;
+  padding-left: 24px;
+  color: #b8c7ce;
+  text-decoration: none;
+}
+
+#sliding-menu .sub-nav .toggle {
+  padding: 5px 15px 0px 15px;
+  top: -45px;
+  position: absolute;
+  cursor: pointer;
+  left: 0px;
+  margin-bottom: -5px;
+  height: 40px;
+}
+
+#sliding-menu .sub-nav .sub-heading {
+  text-align: center;
+  color: #999;
+  border-left: 0px solid transparent !important;
+}
+
+#sliding-menu .fa {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#sliding-menu .material-icons {
+  font-size: 16px;
+  display: inline;
+  vertical-align: middle;
+  padding-left: 7px;
+  padding-right: 6px;
+}
+
+#sliding-menu .glyphicon {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#sliding-menu .sub-nav-check:checked~[id$="-sub"]
+/* matches all elements with id ending "-sub" */
+
+  {
+  -webkit-transform: translate(310px, 0);
+  -ms-transform: translate(310px, 0);
+  transform: translate(310px, 0)
+}
+
+#sliding-menu,
+#sliding-menu .sub-nav {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: transform .25s ease
+}
+
+#sliding-menu,
+#sliding-menu .sub-nav {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0)
+}
+
+
+/* end of style rules for the sliding navigation menu */
+
+/* end of style rules for the nav section */
+
+/* media queries for extra small screen - mobile */
+@media(max-width: 480px) {
+    header {
+        font-size: 15px;
+    }
+    footer {
+        font-size: 10px;
+    }
+    article {
+        display: none;
+    }
+}
+
+@media(max-width: 992px) {
+    nav, article {
+        overflow: scroll;
+    }
+}

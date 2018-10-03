@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sliding Menu</title>
+    <link rel="stylesheet" type="text/css" href="css/sliding_menu.css">
+    <script src="js/sliding_menu.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Paprika' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+    <header>Pure HTML5 CSS3 & JS Sliding Navigation Menu</header>
+
+    <section>
+
+        <nav>
+            <div class="profile">
+                <div class="avatar">
+                    <img src="images/avatar-icon.png" width="135px" height="135px" />
+                </div>
+                <div class="profile-buttons">
+                    <button onclick="testing()"><i class="fa fa-first-order" aria-hidden="true"></i></button><br />
+                    <button><i class="fa fa-cogs" aria-hidden="true"></i></button><br />
+                    <button><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                </div>
+                <br style="clear:both;" />
+            </div>
+
+            <div class="sidenav-heading">
+                <h4>Main Navigation</h4>
+            </div>
+
+            <div id="sliding-menu-wrapper">
+                <div id="sliding-menu">
+                    <ul>
+                        <li>
+                            <label for="booksAndAudible" class="big-toggle-sub" onclick="showClose()">
+                                <i class="fa fa-book" aria-hidden="true"></i> Books & Audible
+                                <i class="fa fa-chevron-right float-right"></i>
+                            </label>
+                            <input type="checkbox" name="nav" id="booksAndAudible" class="sub-nav-check" hidden=""
+                                onchange="booksCheck = event.target.checked" />
+
+                            <ul id="booksAndAudible-sub" class="sub-nav">
+                                <li class="sub-heading">Books & Audible
+                                    <label for="booksAndAudible" class="toggle" title="Back" aria-hidden="true" onclick="hideClose()">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </label>
+                                </li>
+                                <li>
+                                    <a>Text Books</a>
+                                </li>
+                                <li>
+                                    <a>Magazines</a>
+                                </li>
+                                <li>
+                                    <a>Audio Books</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="moviesMusicGames" class="big-toggle-sub" onclick="showClose()">
+                                <i class="fa fa-film" aria-hidden="true"></i> Movies, Music & Games
+                                <i class="fa fa-chevron-right float-right"></i>
+                            </label>
+                            <input type="checkbox" name="nav" id="moviesMusicGames" class="sub-nav-check" hidden=""
+                                onchange="moviesMusicGamesCheck = event.target.checked" />
+
+                            <ul id="moviesMusicGames-sub" class="sub-nav">
+                                <li class="sub-heading">Movies, Music & Games
+                                    <label for="moviesMusicGames" class="toggle" title="Back" onclick="hideClose()">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </label>
+                                </li>
+
+                                <li class="stepMenuMarginFix">
+                                    <!-- level 1 -->
+                                    <label for="movies" class="big-toggle-sub extra-left-padding">
+                                        <i class="fa fa-ticket" aria-hidden="true"></i> Movies
+                                        <i class="fa fa-chevron-right float-right"></i>
+                                    </label>
+                                    <input type="checkbox" name="nav" id="movies" class="sub-nav-check" hidden=""
+                                        onchange="moviesCheck = event.target.checked" />
+                                    <ul id="movies-sub" class="sub-nav">
+                                        <!-- level 2 -->
+                                        <li class="sub-heading">Movies
+                                            <label for="movies" class="toggle" title="Back">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <a>Movies</a>
+                                        </li>
+                                        <li>
+                                            <a>Blu-ray</a>
+                                        </li>
+                                        <li>
+                                            <a>Television Series</a>
+                                        </li>
+                                        <li>
+                                            <a>Short Films</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="stepMenuMarginFix">
+                                    <!-- level 1 -->
+                                    <label for="music" class="big-toggle-sub extra-left-padding">
+                                        <i class="fa fa-music" aria-hidden="true"></i> Music
+                                        <i class="fa fa-chevron-right float-right"></i>
+                                    </label>
+                                    <input type="checkbox" name="nav" id="music" class="sub-nav-check" hidden=""
+                                        onchange="musicCheck = event.target.checked" />
+                                    <ul id="music-sub" class="sub-nav">
+                                        <!-- level 2 -->
+                                        <li class="sub-heading">Music
+                                            <label for="music" class="toggle" title="Back">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <a>CDs & Vinyl</a>
+                                        </li>
+                                        <li>
+                                            <a>Digital Music</a>
+                                        </li>
+                                        <li>
+                                            <a>Musical Instruments</a>
+                                        </li>
+                                        <li>
+                                            <a>Headphones</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="stepMenuMarginFix">
+                                    <!-- level 1 -->
+                                    <label for="games" class="big-toggle-sub extra-left-padding">
+                                        <i class="fa fa-gamepad" aria-hidden="true"></i> Games
+                                        <i class="fa fa-chevron-right float-right"></i>
+                                    </label>
+                                    <input type="checkbox" name="nav" id="games" class="sub-nav-check" hidden=""
+                                        onchange="gamesCheck = event.target.checked" />
+                                    <ul id="games-sub" class="sub-nav">
+                                        <!-- level 2 -->
+                                        <li class="sub-heading">Games
+                                            <label for="games" class="toggle" title="Back">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <a>Video Games</a>
+                                        </li>
+                                        <li>
+                                            <a>PC Gaming</a>
+                                        </li>
+                                        <li>
+                                            <a>Digital Games</a>
+                                        </li>
+                                        <li>
+                                            <a>Console Games</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="electronics" class="big-toggle-sub" onclick="showClose()">
+                                <i class="fa fa-bolt" aria-hidden="true"></i> Electronics
+                                <i class="fa fa-chevron-right float-right"></i>
+                            </label>
+                            <input type="checkbox" name="nav" id="electronics" class="sub-nav-check" hidden="" onchange="electronicsCheck = event.target.checked" />
+
+                            <ul id="electronics-sub" class="sub-nav">
+                                <li class="sub-heading">Electronics
+                                    <label for="electronics" class="toggle" title="Back" onclick="hideClose()">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                    </label>
+                                </li>
+                                <li class="stepMenuMarginFix">
+                                    <!-- level 1 -->
+                                    <label for="headPhones" class="big-toggle-sub extra-left-padding">
+                                        <i class="fa fa-headphones" aria-hidden="true"></i> Headphones & Wireless Buds
+                                        <i class="fa fa-chevron-right float-right"></i>
+                                    </label>
+                                    <input type="checkbox" name="nav" id="headPhones" class="sub-nav-check" hidden=""
+                                        onchange="headPhonesCheck = event.target.checked" />
+
+                                    <ul id="headPhones-sub" class="sub-nav">
+                                        <li class="sub-heading">Headphones & Wireless Buds
+                                            <label for="headPhones" class="toggle" title="Back">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </label>
+                                        </li>
+
+                                        <li class="stepMenuMarginFix">
+                                            <!-- level 2 -->
+                                            <label for="headPhoneBrands" class="big-toggle-sub extra-left-padding">
+                                                <i class="fa fa-headphones" aria-hidden="true"></i> Headphones
+                                                <i class="fa fa-chevron-right float-right"></i>
+                                            </label>
+                                            <input type="checkbox" name="nav" id="headPhoneBrands" class="sub-nav-check"
+                                                hidden="" onchange="headPhoneBrandsCheck = event.target.checked" />
+
+                                            <ul id="headPhoneBrands-sub" class="sub-nav">
+                                                <!-- level 3 -->
+                                                <li class="sub-heading">Headphones
+                                                    <label for="headPhoneBrands" class="toggle" title="Back">
+                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <a>Bang and Olufsen</a>
+                                                </li>
+                                                <li>
+                                                    <a>Klipsch</a>
+                                                </li>
+                                                <li>
+                                                    <a>Bose</a>
+                                                </li>
+                                                <li>
+                                                    <a>Audio Technica</a>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li class="stepMenuMarginFix">
+                                            <!-- level 2 -->
+                                            <label for="wirelessBudsBrands" class="big-toggle-sub extra-left-padding">
+                                                <i class="fa fa-headphones" aria-hidden="true"></i> Wireless Earbuds
+                                                <i class="fa fa-chevron-right float-right"></i>
+                                            </label>
+                                            <input type="checkbox" name="nav" id="wirelessBudsBrands" class="sub-nav-check"
+                                                hidden="" onchange="wirelessBudsBrandsCheck = event.target.checked" />
+
+                                            <ul id="wirelessBudsBrands-sub" class="sub-nav">
+                                                <!-- level 3 -->
+                                                <li class="sub-heading">Wireless Earbuds
+                                                    <label for="wirelessBudsBrands" class="toggle" title="Back">
+                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <a>Sennheiser</a>
+                                                </li>
+                                                <li>
+                                                    <a>Air pods</a>
+                                                </li>
+                                                <li>
+                                                    <a>Jay birds</a>
+                                                </li>
+                                                <li>
+                                                    <a>Gear Icon X</a>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="stepMenuMarginFix">
+                                    <!-- level 1 -->
+                                    <label for="cellPhones" class="big-toggle-sub extra-left-padding">
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> Cell Phones & Accessories
+                                        <i class="fa fa-chevron-right float-right"></i>
+                                    </label>
+                                    <input type="checkbox" name="nav" id="cellPhones" class="sub-nav-check" hidden=""
+                                        onchange="cellPhonesCheck = event.target.checked" />
+
+                                    <ul id="cellPhones-sub" class="sub-nav">
+                                        <li class="sub-heading">Cell Phones & Accessories
+                                            <label for="cellPhones" class="toggle" title="Back">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </label>
+                                        </li>
+
+                                        <li class="stepMenuMarginFix">
+                                            <!-- level 2 -->
+                                            <label for="cellPhoneBrands" class="big-toggle-sub extra-left-padding">
+                                                <i class="fa fa-mobile" aria-hidden="true"></i> Cell Phones
+                                                <i class="fa fa-chevron-right float-right"></i>
+                                            </label>
+                                            <input type="checkbox" name="nav" id="cellPhoneBrands" class="sub-nav-check"
+                                                hidden="" onchange="cellPhoneBrandsCheck = event.target.checked" />
+
+                                            <ul id="cellPhoneBrands-sub" class="sub-nav">
+                                                <!-- level 3 -->
+                                                <li class="sub-heading">Cell Phones
+                                                    <label for="cellPhoneBrands" class="toggle" title="Back">
+                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <a>Apple</a>
+                                                </li>
+                                                <li>
+                                                    <a>Samsung</a>
+                                                </li>
+                                                <li>
+                                                    <a>One Plus</a>
+                                                </li>
+                                                <li>
+                                                    <a>Huawei</a>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="stepMenuMarginFix">
+                                    <!-- level 1 -->
+                                    <label for="wirelessSpeakers" class="big-toggle-sub extra-left-padding">
+                                        <i class="fa fa-bluetooth-b" aria-hidden="true"></i> Bluetooth/Wireless
+                                        Speakers
+                                        <i class="fa fa-chevron-right float-right"></i>
+                                    </label>
+                                    <input type="checkbox" name="nav" id="wirelessSpeakers" class="sub-nav-check"
+                                        hidden="" onchange="wirelessSpeakersCheck = event.target.checked" />
+
+                                    <ul id="wirelessSpeakers-sub" class="sub-nav">
+                                        <li class="sub-heading">Bluetooth/Wireless Speakers
+                                            <label for="wirelessSpeakers" class="toggle" title="Back">
+                                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                            </label>
+                                        </li>
+
+                                        <li class="stepMenuMarginFix">
+                                            <!-- level 2 -->
+                                            <label for="wirelessSpeakerBrands" class="big-toggle-sub extra-left-padding">
+                                                <i class="fa fa-bluetooth-b" aria-hidden="true"></i> Wireless Speakers
+                                                <i class="fa fa-chevron-right float-right"></i>
+                                            </label>
+                                            <input type="checkbox" name="nav" id="wirelessSpeakerBrands" class="sub-nav-check"
+                                                hidden="" onchange="wirelessSpeakerBrandsCheck = event.target.checked" />
+
+                                            <ul id="wirelessSpeakerBrands-sub" class="sub-nav">
+                                                <!-- level 3 -->
+                                                <li class="sub-heading"> Wireless Speakers
+                                                    <label for="wirelessSpeakerBrands" class="toggle" title="Back">
+                                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <a>Sony</a>
+                                                </li>
+                                                <li>
+                                                    <a>Beats</a>
+                                                </li>
+                                                <li>
+                                                    <a>Bose</a>
+                                                </li>
+                                                <li>
+                                                    <a>Yamaha</a>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <label id="dt-close-nav" class="toggle" onclick="uncheckboxes()" title="Close All">
+                    <i class="fa fa-times-circle fa-lg" aria-hidden="true"></i>
+                </label>
+            </div>
+        </nav>
+        <article>
+            <div>
+                <h3>How does the Sliding Navigation Menu work?</h3>
+                <p>
+                    This Sliding Naviagation Menu works based off of hidden checkboxes and menu sheets. Each of the
+                    heading menu items
+                    is an input of type checkbox with 2 labels. The first label holds the name of the item while the
+                    second one holds the back chevron icon. These checkboxes are made invisible using their hidden
+                    attribute.
+                    Also, the menu items that are children to this main heading are initially floating to the left of
+                    the screen by the amount of width of the side navigation.
+                </p>
+                <p>
+                    When the user clicks on one of the
+                    heading menu items, the underlying checkbox is set to true and using the CSS3 transition and
+                    transform properties the child menu is brought into the view along with a back icon and close icon.
+                    The user can either click on the back icon or the close icon to successfully go back to the
+                    initial state.
+                </p>
+                <p><strong>Disclaimer:</strong> This sliding menu is Framework / Library agnostic and it does not have
+                    any
+                    dependencies. The menu itself however, is pretty responsive. You can use the Overflow CSS
+                    property to take care of the extra white spaces around the container if any. For Accessibility reasons, you
+                    can omit the second label on the chekboxes.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>This Pure HTML5 CSS3 & JS Sliding Navigation Menu is Framework/Library agnostic.</footer>
+
+</body>
+
+</html>
